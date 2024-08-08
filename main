@@ -1,0 +1,22 @@
+public class EvenDigitSum {
+//This program calculates the sum of the even digits of a given number
+ 
+    public static int getEvenDigitSum(int number) {
+        
+        if (number < 0) {
+            return -1;
+        }
+
+        int sum = 0;
+
+//the i/=10 iterator moves to the next digit every iteration
+        for (int i = number; i > 0; i /= 10) { 
+            int lastDigit = i % 10;
+            if (lastDigit % 2 == 0) {
+                sum += lastDigit;
+            } 
+        } return sum;
+        
+    } 
+    
+}
